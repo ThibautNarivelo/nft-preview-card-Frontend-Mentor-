@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --bg-dark-blue: hsl(217, 54%, 11%);
+  --card-dark-blue: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-dark-blue);
+}
+
+section {
+  width: 350px;
+  height: 600px;
+  background-color: var(--card-dark-blue);
+  border-radius: 15px;
+  box-shadow: 5px 15px 30px black;
+}
+
+h1 {
+  color: var(--white);
+  margin: 20px 0 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+h4 {
+  color: var(--cyan);
+  margin-left: 6px;
+}
+
+p {
+  color: var(--soft-blue);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* CLASS */
+
+.container {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crypto {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.crypto .equilibrium {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.crypto .bluebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.eth {
+  display: flex;
+  align-items: center;
+}
+
+.eth img {
+  height: 18px;
+  margin-right: 8px;
+}
+
+.eth h4 {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.divider {
+  height: 0.1px;
+  width: 100%;
+  background: var(--soft-blue);
+  opacity: 50%;
+}
+
+.footer {
+  display: flex;
+  align-self: flex-start;
+  margin: 20px 0;
+}
+
+.footer .footer-icon {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: var(--white);
+  margin-right: 10px;
+}
+
+.footer .footer-icon img {
+  height: 28px;
+  width: 28px;
+  margin: auto;
+}
+
+.footer .author {
+  margin-left: 7px;
+  margin-top: 5px;
+}
+
+.footer .author p,
+.footer .author a {
+  display: inline;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--soft-blue);
+  cursor: pointer;
+}
+
+/* Hover */
+
+h1:hover {
+  color: var(--cyan);
+}
+
+.crypto .bluebox:hover {
+  opacity: 1;
+}
+
+.footer .author a:hover {
+  color: var(--cyan);
+}
+
+/* Media Query */
+@media (max-width: 380px) {
+  section {
+    width: 325px;
+    height: 550px;
+  }
+  .crypto {
+    position: relative;
+    width: 100%;
+    height: 270px;
+  }
+}
